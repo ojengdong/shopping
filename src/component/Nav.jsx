@@ -2,20 +2,28 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 const Nav = () => {
     const loginList = ['매장찾기', '고객센터', '가입하기', '로그인']
     const menuList = ['New Releases', 'Men', 'Women', 'Kids', 'sale', 'SNKRS', '나이키 앱']
+
+    const navigate = useNavigate();
+    const goToLogin = (index) => {
+        navigate('/login')
+    }    
     const heart = <FontAwesomeIcon icon={faHeart} />
     const shopping = <FontAwesomeIcon icon={faCartShopping} />
   return (
     <div>
         <div className='login'>
             <ul>
-                {loginList.map((item,i)=>{
-                    return (
-                        <li className='login-item' key={i}>{item}</li>
-                    )
+                {loginList.map((item,i, index)=>{
+                    if( i === loginList.length - 1 ){
+                        return  <li className='login-item' key={i} onClick={goToLogin}>{item}</li>
+                    }else {
+                        return <li className='login-item' key={i}>{item}</li>
+                    }
                 })}
             </ul>
         </div>
