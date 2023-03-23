@@ -6,7 +6,7 @@
             "choice" : true,
             "title" : "나이키 에어포스 1 '07",
             "price" : 139000,
-            "new" : true,
+            "new" : false,
             "size" : ["240", "245", "250", "255", "260"]
         },
 
@@ -26,7 +26,7 @@
             "choice" : true,
             "title" : "나이키 덩크 로우 레트로 SE",
             "price" : 139000,
-            "new" : true,
+            "new" : false,
             "size" : ["240", "245", "250", "255", "260"]
         },
 
@@ -66,7 +66,7 @@
             "choice" : true,
             "title" : "나이키 메트콘 8 AMP",
             "price" : 169000,
-            "new" : true,
+            "new" : false,
             "size" : ["230", "235", "240", "245", "250"]
         },
 
@@ -96,7 +96,7 @@
             "choice" : false,
             "title" : "나이키 알파플레이 2",
             "price" : 329000,
-            "new" : true,
+            "new" : false,
             "size" : ["240", "245", "250", "255", "260"]
         },
 
@@ -116,7 +116,7 @@
             "choice" : true,
             "title" : "나이키 에어포스 1 '07 LV8",
             "price" : 149000,
-            "new" : true,
+            "new" : false,
             "size" : ["240", "245", "250", "255", "260"]
         },
 

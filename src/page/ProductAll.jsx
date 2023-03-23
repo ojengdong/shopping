@@ -38,7 +38,13 @@ const ProductAll = () => {
 
   return (
     <div>
-      <ProductCard/>
+      {
+        productList.map((menu,i)=>{
+          return(
+            <ProductCard menu={menu}/>
+          )
+        })
+      }
     </div>
   )
 }

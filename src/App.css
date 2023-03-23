@@ -143,3 +143,14 @@ li {
 .icon-box p :hover {
     color: gray;
 }
+
+.card-Box {
+    box-shadow: 5px 5px 5px #ccc;
+    width: 500px;
+    margin: 20px 15px;
+}
+
+.card-Box img {
+    width: 500px;
+    height: 400px;
+}
