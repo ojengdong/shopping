@@ -1,8 +1,27 @@
 import React from 'react'
+import {Container, Form} from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
+const Login = ({setUserLogin}) => {
+  const navigate = useNavigate()
 
-const Login = () => {
+  const loginUser = (e) => {
+    // 콘솔이 잠깐 찍혔다가 사라지는 이유
+    // : 페이지를 새로고침 하기 때문!
+    // 해결방법 : preventDefault로 form이 새로고침 하는걸 막아준다.
+    e.preventDefault();
+    console.log("loginUser")
+
+    setUserLogin(true);
+    navigate('/')
+  }
+
   return (
+    <Container>
+      {/* onSubmit: type이 submit일 경우 onClick이 아니라 onSubmit을 사용 */}
+      {/* form 자체에서 주는 이벤트를 파라미터 값으로 보내줌 */}
+    <Form onSubmit={(e) => loginUser(e)}>
     <div className='Login-box'>
       <div className='Login-logo'>
       <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202004/23/b7510090-6f79-48f8-a096-65437ecf33f2.jpg" alt="" />
@@ -35,9 +54,11 @@ const Login = () => {
       </div>
       
       <div className='Login-sub-btn-box'>
-        <button className='Login-sub-btn'>계속</button>
+        <button type='submit' className='Login-sub-btn'>계속</button>
       </div>
     </div> 
+    </Form>
+    </Container>
   )
 }
 

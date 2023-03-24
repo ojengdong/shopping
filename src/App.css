@@ -189,7 +189,8 @@ li {
     position: relative;
     padding: 10px 18px;
     margin: 20px 20px;
-    width: 450px;
+    width: 400px;
+    height: 60px;
 }
 
 .Login-email-input-box:hover {
@@ -200,6 +201,7 @@ li {
     position: absolute;
     padding: 2px 5px;
     color: gray;
+    transform: scale(0.8) translateY(-15px);
 }
 
 .Login-email-input-box input {
